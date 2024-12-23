@@ -1,0 +1,151 @@
+/* 전체적인 레이아웃 설정 */
+body {
+    font-family: Arial, sans-serif; /* 글꼴 설정 */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* 배경색 */
+}
+
+header {
+    background-color: #333; /* 헤더 배경색 */
+    color: white; /* 헤더 텍스트 색 */
+    padding: 20px; /* 패딩 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+header h1 {
+    margin: 0; /* 제목과 다른 요소의 간격 제거 */
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white; /* 링크 텍스트 색 */
+    margin: 0 15px; /* 링크 사이 간격 */
+    text-decoration: none; /* 밑줄 제거 */
+    font-size: 16px;
+}
+
+nav a:hover {
+    text-decoration: underline; /* 링크 hover 시 밑줄 */
+}
+
+main {
+    padding: 20px; /* 본문 패딩 */
+    max-width: 900px;
+    margin: 20px auto; /* 중앙 정렬 */
+    background-color: white; /* 본문 배경색 */
+    border-radius: 8px; /* 둥근 모서리 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 */
+}
+
+h2 {
+    font-size: 24px;
+    color: #333; /* 제목 색 */
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none; /* 기본 리스트 스타일 제거 */
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px; /* 각 게시물 간의 간격 */
+}
+
+ul li a {
+    color: #007BFF; /* 링크 색 */
+    text-decoration: none;
+    font-size: 18px;
+}
+
+ul li a:hover {
+    text-decoration: underline; /* 링크 hover 시 밑줄 */
+}
+
+/* 검색창 스타일 */
+form {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    padding: 8px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* 게시물 추가 버튼 */
+a[href="create_post.php"] {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+a[href="create_post.php"]:hover {
+    background-color: #218838;
+}
+
+/* 로그인, 회원가입 버튼 스타일 */
+a[href="login.php"], a[href="signup.php"], a[href="logout.php"] {
+    color: white;
+    background-color: #007BFF;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+a[href="login.php"]:hover, a[href="signup.php"]:hover, a[href="logout.php"]:hover {
+    background-color: #0056b3;
+}
+
+/* 모바일 화면 대응 */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    nav a {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+    }
+}
+
